@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spritedex Support</title>
+<style>
+  :root { --violet:#6b4aed; --cyan:#26c7e3; --ink:#15161c; --muted:#5c6070; --bg:#fff; --card:#f6f6fa; }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink:#f2f3f7; --muted:#a2a7ba; --bg:#101117; --card:#191b24; }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; font:16px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+         color:var(--ink); background:var(--bg); }
+  .wrap { max-width:720px; margin:0 auto; padding:0 20px 72px; }
+  header { background:linear-gradient(135deg,var(--violet),var(--cyan)); color:#fff;
+           padding:56px 20px; text-align:center; margin-bottom:40px; }
+  header h1 { margin:0 0 8px; font-size:2.4rem; letter-spacing:-.02em; }
+  header p { margin:0; opacity:.92; }
+  h2 { margin-top:40px; font-size:1.3rem; letter-spacing:-.01em; }
+  details { background:var(--card); border-radius:12px; padding:14px 18px; margin:10px 0; }
+  summary { cursor:pointer; font-weight:600; }
+  details p { color:var(--muted); margin:10px 0 2px; }
+  a { color:var(--violet); }
+  @media (prefers-color-scheme: dark) { a { color:#a48cff; } }
+  .contact { background:var(--card); border-radius:14px; padding:22px; margin-top:28px; text-align:center; }
+  footer { margin-top:48px; padding-top:22px; border-top:1px solid var(--card);
+           color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Spritedex Support</h1>
+  <p>Track every collectible you've unlocked.</p>
+</header>
+
+<div class="wrap">
+
+  <h2>Frequently asked</h2>
+
+  <details open>
+    <summary>Why doesn't Spritedex fill in what I already own?</summary>
+    <p>Because it can't, and no app can do this legitimately. There is no public,
+    authorised way to read your Fortnite account's collection. Spritedex never connects
+    to your game account &mdash; you mark items yourself. Any app claiming to import
+    your locker automatically is doing something it shouldn't.</p>
+  </details>
+
+  <details>
+    <summary>Is my collection saved if I get a new phone?</summary>
+    <p>Yes, if you were signed into iCloud. Your collection syncs through your own
+    private iCloud database and reappears when you sign in on the new device. If you
+    weren't signed into iCloud, the data was only on the old device.</p>
+  </details>
+
+  <details>
+    <summary>An item is missing, wrong, or has no picture.</summary>
+    <p>Item data comes from a public community database that occasionally lags behind
+    a game update. Pull down on any collection to refresh. If it's still wrong after a
+    day or two, email us with the item name and we'll correct it.</p>
+  </details>
+
+  <details>
+    <summary>Why do some items say &ldquo;community reported&rdquo;?</summary>
+    <p>Spritedex labels where each entry came from. Anything we couldn't trace to an
+    official Epic Games source is marked, so you know how much to trust it. We'd
+    rather flag uncertainty than quietly present a guess as fact.</p>
+  </details>
+
+  <details>
+    <summary>Why do some Sprites show &ldquo;Unconfirmed&rdquo; rarity?</summary>
+    <p>Epic has named the Sprites but hasn't published which rarity each one is. Rather
+    than guess, we show it as unconfirmed. It'll be filled in if Epic publishes it.</p>
+  </details>
+
+  <details>
+    <summary>I marked something owned and it disappeared from the list.</summary>
+    <p>You're probably viewing the &ldquo;Missing&rdquo; filter, which hides fully-owned
+    items. Tap the filter icon and choose &ldquo;All&rdquo;. Nothing is ever deleted
+    from your collection by an app update.</p>
+  </details>
+
+  <details>
+    <summary>Does Spritedex work offline?</summary>
+    <p>Yes. Once a collection has loaded it stays available with no connection, and the
+    app works from the moment you install it without any network at all.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete my data?</summary>
+    <p>Settings &rarr; Delete my collection. It removes everything immediately, on your
+    device and in iCloud. Deleting the app also removes local data. We hold nothing on
+    any server, so there's nothing else to request.</p>
+  </details>
+
+  <div class="contact">
+    <strong>Still stuck?</strong>
+    <p>Email <a href="mailto:laurent.koerge@me.com">laurent.koerge@me.com</a><br>
+    Include your device model and iOS version and we'll get back to you.</p>
+  </div>
+
+  <footer>
+    <p>Spritedex is an unofficial, fan-made companion app. It is not created by, endorsed
+    by, affiliated with or sponsored by Epic Games, Inc. Fortnite is a trademark of
+    Epic Games, Inc.</p>
+    <p><a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+
+</div>
+</body>
+</html>
