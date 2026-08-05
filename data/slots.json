@@ -1,0 +1,877 @@
+{
+ "version": 2,
+ "slots": [
+  {
+   "id": "sprite_earth",
+   "name": "Earth",
+   "base": "Earth",
+   "tier": null,
+   "rarity": "rare",
+   "power": "You have a chance to find additional rare items when opening chests"
+  },
+  {
+   "id": "spritevar_earth_gold",
+   "name": "Gold Earth",
+   "base": "Earth",
+   "tier": "gold",
+   "rarity": "rare",
+   "power": "You have a chance to find additional rare items when opening chests"
+  },
+  {
+   "id": "spritevar_earth_gummy",
+   "name": "Gummy Earth",
+   "base": "Earth",
+   "tier": "gummy",
+   "rarity": "rare",
+   "power": "You have a chance to find additional rare items when opening chests"
+  },
+  {
+   "id": "spritevar_earth_galaxy",
+   "name": "Galaxy Earth",
+   "base": "Earth",
+   "tier": "galaxy",
+   "rarity": "rare",
+   "power": "You have a chance to find additional rare items when opening chests"
+  },
+  {
+   "id": "spritevar_earth_cube",
+   "name": "Cube Earth",
+   "base": "Earth",
+   "tier": "cube",
+   "rarity": "rare",
+   "power": "You have a chance to find additional rare items when opening chests"
+  },
+  {
+   "id": "spritevar_earth_quack",
+   "name": "Quack Earth",
+   "base": "Earth",
+   "tier": "quack",
+   "rarity": "rare",
+   "power": "You have a chance to find additional rare items when opening chests"
+  },
+  {
+   "id": "sprite_fire",
+   "name": "Fire",
+   "base": "Fire",
+   "tier": null,
+   "rarity": "rare",
+   "power": "Creates a fiery burst when you deal enough damage to an enemy"
+  },
+  {
+   "id": "spritevar_fire_gold",
+   "name": "Gold Fire",
+   "base": "Fire",
+   "tier": "gold",
+   "rarity": "rare",
+   "power": "Creates a fiery burst when you deal enough damage to an enemy"
+  },
+  {
+   "id": "spritevar_fire_gummy",
+   "name": "Gummy Fire",
+   "base": "Fire",
+   "tier": "gummy",
+   "rarity": "rare",
+   "power": "Creates a fiery burst when you deal enough damage to an enemy"
+  },
+  {
+   "id": "spritevar_fire_galaxy",
+   "name": "Galaxy Fire",
+   "base": "Fire",
+   "tier": "galaxy",
+   "rarity": "rare",
+   "power": "Creates a fiery burst when you deal enough damage to an enemy"
+  },
+  {
+   "id": "spritevar_fire_holofoil",
+   "name": "Holofoil Fire",
+   "base": "Fire",
+   "tier": "holofoil",
+   "rarity": "rare",
+   "power": "Creates a fiery burst when you deal enough damage to an enemy"
+  },
+  {
+   "id": "spritevar_fire_cube",
+   "name": "Cube Fire",
+   "base": "Fire",
+   "tier": "cube",
+   "rarity": "rare",
+   "power": "Creates a fiery burst when you deal enough damage to an enemy"
+  },
+  {
+   "id": "spritevar_fire_quack",
+   "name": "Quack Fire",
+   "base": "Fire",
+   "tier": "quack",
+   "rarity": "rare",
+   "power": "Creates a fiery burst when you deal enough damage to an enemy"
+  },
+  {
+   "id": "sprite_water",
+   "name": "Water",
+   "base": "Water",
+   "tier": null,
+   "rarity": "rare",
+   "power": "Replenish shield while in water for you and your nearby Squad"
+  },
+  {
+   "id": "spritevar_water_gold",
+   "name": "Gold Water",
+   "base": "Water",
+   "tier": "gold",
+   "rarity": "rare",
+   "power": "Replenish shield while in water for you and your nearby Squad"
+  },
+  {
+   "id": "spritevar_water_gummy",
+   "name": "Gummy Water",
+   "base": "Water",
+   "tier": "gummy",
+   "rarity": "rare",
+   "power": "Replenish shield while in water for you and your nearby Squad"
+  },
+  {
+   "id": "spritevar_water_galaxy",
+   "name": "Galaxy Water",
+   "base": "Water",
+   "tier": "galaxy",
+   "rarity": "rare",
+   "power": "Replenish shield while in water for you and your nearby Squad"
+  },
+  {
+   "id": "spritevar_water_holofoil",
+   "name": "Holofoil Water",
+   "base": "Water",
+   "tier": "holofoil",
+   "rarity": "rare",
+   "power": "Replenish shield while in water for you and your nearby Squad"
+  },
+  {
+   "id": "spritevar_water_quack",
+   "name": "Quack Water",
+   "base": "Water",
+   "tier": "quack",
+   "rarity": "rare",
+   "power": "Replenish shield while in water for you and your nearby Squad"
+  },
+  {
+   "id": "sprite_duck",
+   "name": "Duck",
+   "base": "Duck",
+   "tier": null,
+   "rarity": "epic",
+   "power": "Emoting or Jamming replenishes shields"
+  },
+  {
+   "id": "spritevar_duck_gold",
+   "name": "Gold Duck",
+   "base": "Duck",
+   "tier": "gold",
+   "rarity": "epic",
+   "power": "Emoting or Jamming replenishes shields"
+  },
+  {
+   "id": "spritevar_duck_gummy",
+   "name": "Gummy Duck",
+   "base": "Duck",
+   "tier": "gummy",
+   "rarity": "epic",
+   "power": "Emoting or Jamming replenishes shields"
+  },
+  {
+   "id": "spritevar_duck_galaxy",
+   "name": "Galaxy Duck",
+   "base": "Duck",
+   "tier": "galaxy",
+   "rarity": "epic",
+   "power": "Emoting or Jamming replenishes shields"
+  },
+  {
+   "id": "sprite_ghost",
+   "name": "Ghost",
+   "base": "Ghost",
+   "tier": null,
+   "rarity": "epic",
+   "power": "Grants cloak for a duration upon reloading"
+  },
+  {
+   "id": "spritevar_ghost_gold",
+   "name": "Gold Ghost",
+   "base": "Ghost",
+   "tier": "gold",
+   "rarity": "epic",
+   "power": "Grants cloak for a duration upon reloading"
+  },
+  {
+   "id": "spritevar_ghost_gummy",
+   "name": "Gummy Ghost",
+   "base": "Ghost",
+   "tier": "gummy",
+   "rarity": "epic",
+   "power": "Grants cloak for a duration upon reloading"
+  },
+  {
+   "id": "spritevar_ghost_galaxy",
+   "name": "Galaxy Ghost",
+   "base": "Ghost",
+   "tier": "galaxy",
+   "rarity": "epic",
+   "power": "Grants cloak for a duration upon reloading"
+  },
+  {
+   "id": "spritevar_ghost_holofoil",
+   "name": "Holofoil Ghost",
+   "base": "Ghost",
+   "tier": "holofoil",
+   "rarity": "epic",
+   "power": "Grants cloak for a duration upon reloading"
+  },
+  {
+   "id": "sprite_demon",
+   "name": "Demon",
+   "base": "Demon",
+   "tier": null,
+   "rarity": "epic",
+   "power": "Siphon some health and shields when you eliminate an opponent"
+  },
+  {
+   "id": "spritevar_demon_gold",
+   "name": "Gold Demon",
+   "base": "Demon",
+   "tier": "gold",
+   "rarity": "epic",
+   "power": "Siphon some health and shields when you eliminate an opponent"
+  },
+  {
+   "id": "spritevar_demon_gummy",
+   "name": "Gummy Demon",
+   "base": "Demon",
+   "tier": "gummy",
+   "rarity": "epic",
+   "power": "Siphon some health and shields when you eliminate an opponent"
+  },
+  {
+   "id": "spritevar_demon_galaxy",
+   "name": "Galaxy Demon",
+   "base": "Demon",
+   "tier": "galaxy",
+   "rarity": "epic",
+   "power": "Siphon some health and shields when you eliminate an opponent"
+  },
+  {
+   "id": "sprite_king",
+   "name": "King",
+   "base": "King",
+   "tier": null,
+   "rarity": "epic",
+   "power": "Your Pickaxe deals more damage"
+  },
+  {
+   "id": "spritevar_king_gold",
+   "name": "Gold King",
+   "base": "King",
+   "tier": "gold",
+   "rarity": "epic",
+   "power": "Your Pickaxe deals more damage"
+  },
+  {
+   "id": "spritevar_king_gummy",
+   "name": "Gummy King",
+   "base": "King",
+   "tier": "gummy",
+   "rarity": "epic",
+   "power": "Your Pickaxe deals more damage"
+  },
+  {
+   "id": "spritevar_king_galaxy",
+   "name": "Galaxy King",
+   "base": "King",
+   "tier": "galaxy",
+   "rarity": "epic",
+   "power": "Your Pickaxe deals more damage"
+  },
+  {
+   "id": "spritevar_king_holofoil",
+   "name": "Holofoil King",
+   "base": "King",
+   "tier": "holofoil",
+   "rarity": "epic",
+   "power": "Your Pickaxe deals more damage"
+  },
+  {
+   "id": "sprite_dream",
+   "name": "Dream",
+   "base": "Dream",
+   "tier": null,
+   "rarity": "legendary",
+   "power": "Grants a random item at each level, exploding with legendary loot at Max Level"
+  },
+  {
+   "id": "spritevar_dream_gold",
+   "name": "Gold Dream",
+   "base": "Dream",
+   "tier": "gold",
+   "rarity": "legendary",
+   "power": "Grants a random item at each level, exploding with legendary loot at Max Level"
+  },
+  {
+   "id": "spritevar_dream_gummy",
+   "name": "Gummy Dream",
+   "base": "Dream",
+   "tier": "gummy",
+   "rarity": "legendary",
+   "power": "Grants a random item at each level, exploding with legendary loot at Max Level"
+  },
+  {
+   "id": "spritevar_dream_galaxy",
+   "name": "Galaxy Dream",
+   "base": "Dream",
+   "tier": "galaxy",
+   "rarity": "legendary",
+   "power": "Grants a random item at each level, exploding with legendary loot at Max Level"
+  },
+  {
+   "id": "spritevar_dream_cube",
+   "name": "Cube Dream",
+   "base": "Dream",
+   "tier": "cube",
+   "rarity": "legendary",
+   "power": "Grants a random item at each level, exploding with legendary loot at Max Level"
+  },
+  {
+   "id": "sprite_punk",
+   "name": "Punk",
+   "base": "Punk",
+   "tier": null,
+   "rarity": "legendary",
+   "power": "Possibly nothing... or infinitely something"
+  },
+  {
+   "id": "spritevar_punk_gold",
+   "name": "Gold Punk",
+   "base": "Punk",
+   "tier": "gold",
+   "rarity": "legendary",
+   "power": "Possibly nothing... or infinitely something"
+  },
+  {
+   "id": "spritevar_punk_gummy",
+   "name": "Gummy Punk",
+   "base": "Punk",
+   "tier": "gummy",
+   "rarity": "legendary",
+   "power": "Possibly nothing... or infinitely something"
+  },
+  {
+   "id": "spritevar_punk_galaxy",
+   "name": "Galaxy Punk",
+   "base": "Punk",
+   "tier": "galaxy",
+   "rarity": "legendary",
+   "power": "Possibly nothing... or infinitely something"
+  },
+  {
+   "id": "spritevar_punk_cube",
+   "name": "Cube Punk",
+   "base": "Punk",
+   "tier": "cube",
+   "rarity": "legendary",
+   "power": "Possibly nothing... or infinitely something"
+  },
+  {
+   "id": "sprite_zero_point",
+   "name": "Zero Point",
+   "base": "Zero Point",
+   "tier": null,
+   "rarity": "mythic",
+   "power": "Spawn a Shield Bubble Jr. when you use a healing item on yourself"
+  },
+  {
+   "id": "spritevar_zero_point_gold",
+   "name": "Gold Zero Point",
+   "base": "Zero Point",
+   "tier": "gold",
+   "rarity": "mythic",
+   "power": "Spawn a Shield Bubble Jr. when you use a healing item on yourself"
+  },
+  {
+   "id": "spritevar_zero_point_gummy",
+   "name": "Gummy Zero Point",
+   "base": "Zero Point",
+   "tier": "gummy",
+   "rarity": "mythic",
+   "power": "Spawn a Shield Bubble Jr. when you use a healing item on yourself"
+  },
+  {
+   "id": "spritevar_zero_point_galaxy",
+   "name": "Galaxy Zero Point",
+   "base": "Zero Point",
+   "tier": "galaxy",
+   "rarity": "mythic",
+   "power": "Spawn a Shield Bubble Jr. when you use a healing item on yourself"
+  },
+  {
+   "id": "spritevar_zero_point_holofoil",
+   "name": "Holofoil Zero Point",
+   "base": "Zero Point",
+   "tier": "holofoil",
+   "rarity": "mythic",
+   "power": "Spawn a Shield Bubble Jr. when you use a healing item on yourself"
+  },
+  {
+   "id": "spritevar_zero_point_cube",
+   "name": "Cube Zero Point",
+   "base": "Zero Point",
+   "tier": "cube",
+   "rarity": "mythic",
+   "power": "Spawn a Shield Bubble Jr. when you use a healing item on yourself"
+  },
+  {
+   "id": "spritevar_zero_point_quack",
+   "name": "Quack Zero Point",
+   "base": "Zero Point",
+   "tier": "quack",
+   "rarity": "mythic",
+   "power": "Spawn a Shield Bubble Jr. when you use a healing item on yourself"
+  },
+  {
+   "id": "sprite_striker",
+   "name": "Striker",
+   "base": "Striker",
+   "tier": null,
+   "rarity": "epic",
+   "power": "Gain Overdrive when you Mantle or Hurdle"
+  },
+  {
+   "id": "spritevar_striker_gold",
+   "name": "Gold Striker",
+   "base": "Striker",
+   "tier": "gold",
+   "rarity": "epic",
+   "power": "Gain Overdrive when you Mantle or Hurdle"
+  },
+  {
+   "id": "spritevar_striker_gummy",
+   "name": "Gummy Striker",
+   "base": "Striker",
+   "tier": "gummy",
+   "rarity": "epic",
+   "power": "Gain Overdrive when you Mantle or Hurdle"
+  },
+  {
+   "id": "spritevar_striker_galaxy",
+   "name": "Galaxy Striker",
+   "base": "Striker",
+   "tier": "galaxy",
+   "rarity": "epic",
+   "power": "Gain Overdrive when you Mantle or Hurdle"
+  },
+  {
+   "id": "spritevar_striker_holofoil",
+   "name": "Holofoil Striker",
+   "base": "Striker",
+   "tier": "holofoil",
+   "rarity": "epic",
+   "power": "Gain Overdrive when you Mantle or Hurdle"
+  },
+  {
+   "id": "sprite_fishy",
+   "name": "Fishy",
+   "base": "Fishy",
+   "tier": null,
+   "rarity": "rare",
+   "power": "Swim speed way up, plus a brief movement speed boost when you take damage"
+  },
+  {
+   "id": "spritevar_fishy_gold",
+   "name": "Gold Fishy",
+   "base": "Fishy",
+   "tier": "gold",
+   "rarity": "rare",
+   "power": "Swim speed way up, plus a brief movement speed boost when you take damage"
+  },
+  {
+   "id": "spritevar_fishy_gummy",
+   "name": "Gummy Fishy",
+   "base": "Fishy",
+   "tier": "gummy",
+   "rarity": "rare",
+   "power": "Swim speed way up, plus a brief movement speed boost when you take damage"
+  },
+  {
+   "id": "spritevar_fishy_galaxy",
+   "name": "Galaxy Fishy",
+   "base": "Fishy",
+   "tier": "galaxy",
+   "rarity": "rare",
+   "power": "Swim speed way up, plus a brief movement speed boost when you take damage"
+  },
+  {
+   "id": "spritevar_fishy_cube",
+   "name": "Cube Fishy",
+   "base": "Fishy",
+   "tier": "cube",
+   "rarity": "rare",
+   "power": "Swim speed way up, plus a brief movement speed boost when you take damage"
+  },
+  {
+   "id": "sprite_aura",
+   "name": "Aura",
+   "base": "Aura",
+   "tier": null,
+   "rarity": "epic",
+   "power": "Gain a Shock Rock charge when you deal enough damage"
+  },
+  {
+   "id": "spritevar_aura_gold",
+   "name": "Gold Aura",
+   "base": "Aura",
+   "tier": "gold",
+   "rarity": "epic",
+   "power": "Gain a Shock Rock charge when you deal enough damage"
+  },
+  {
+   "id": "spritevar_aura_gummy",
+   "name": "Gummy Aura",
+   "base": "Aura",
+   "tier": "gummy",
+   "rarity": "epic",
+   "power": "Gain a Shock Rock charge when you deal enough damage"
+  },
+  {
+   "id": "spritevar_aura_galaxy",
+   "name": "Galaxy Aura",
+   "base": "Aura",
+   "tier": "galaxy",
+   "rarity": "epic",
+   "power": "Gain a Shock Rock charge when you deal enough damage"
+  },
+  {
+   "id": "sprite_boss",
+   "name": "Boss",
+   "base": "Boss",
+   "tier": null,
+   "rarity": "legendary",
+   "power": "A boost to your max HP and Shield"
+  },
+  {
+   "id": "spritevar_boss_gold",
+   "name": "Gold Boss",
+   "base": "Boss",
+   "tier": "gold",
+   "rarity": "legendary",
+   "power": "A boost to your max HP and Shield"
+  },
+  {
+   "id": "spritevar_boss_gummy",
+   "name": "Gummy Boss",
+   "base": "Boss",
+   "tier": "gummy",
+   "rarity": "legendary",
+   "power": "A boost to your max HP and Shield"
+  },
+  {
+   "id": "spritevar_boss_galaxy",
+   "name": "Galaxy Boss",
+   "base": "Boss",
+   "tier": "galaxy",
+   "rarity": "legendary",
+   "power": "A boost to your max HP and Shield"
+  },
+  {
+   "id": "spritevar_boss_cube",
+   "name": "Cube Boss",
+   "base": "Boss",
+   "tier": "cube",
+   "rarity": "legendary",
+   "power": "A boost to your max HP and Shield"
+  },
+  {
+   "id": "sprite_grim_reaper",
+   "name": "Grim Reaper",
+   "base": "Grim Reaper",
+   "tier": null,
+   "rarity": "mythic",
+   "power": "Anyone who attacks you gets marked for a duration"
+  },
+  {
+   "id": "spritevar_grim_reaper_gold",
+   "name": "Gold Grim Reaper",
+   "base": "Grim Reaper",
+   "tier": "gold",
+   "rarity": "mythic",
+   "power": "Anyone who attacks you gets marked for a duration"
+  },
+  {
+   "id": "spritevar_grim_reaper_gummy",
+   "name": "Gummy Grim Reaper",
+   "base": "Grim Reaper",
+   "tier": "gummy",
+   "rarity": "mythic",
+   "power": "Anyone who attacks you gets marked for a duration"
+  },
+  {
+   "id": "spritevar_grim_reaper_galaxy",
+   "name": "Galaxy Grim Reaper",
+   "base": "Grim Reaper",
+   "tier": "galaxy",
+   "rarity": "mythic",
+   "power": "Anyone who attacks you gets marked for a duration"
+  },
+  {
+   "id": "spritevar_grim_reaper_holofoil",
+   "name": "Holofoil Grim Reaper",
+   "base": "Grim Reaper",
+   "tier": "holofoil",
+   "rarity": "mythic",
+   "power": "Anyone who attacks you gets marked for a duration"
+  },
+  {
+   "id": "spritevar_grim_reaper_cube",
+   "name": "Cube Grim Reaper",
+   "base": "Grim Reaper",
+   "tier": "cube",
+   "rarity": "mythic",
+   "power": "Anyone who attacks you gets marked for a duration"
+  },
+  {
+   "id": "sprite_batman",
+   "name": "Batman",
+   "base": "Batman",
+   "tier": null,
+   "rarity": "unknown",
+   "power": "Leap into the air and deploy the Bat Cape to glide across the Island."
+  },
+  {
+   "id": "spritevar_batman_gold",
+   "name": "Gold Batman",
+   "base": "Batman",
+   "tier": "gold",
+   "rarity": "unknown",
+   "power": "Leap into the air and deploy the Bat Cape to glide across the Island."
+  },
+  {
+   "id": "spritevar_batman_gummy",
+   "name": "Gummy Batman",
+   "base": "Batman",
+   "tier": "gummy",
+   "rarity": "unknown",
+   "power": "Leap into the air and deploy the Bat Cape to glide across the Island."
+  },
+  {
+   "id": "spritevar_batman_galaxy",
+   "name": "Galaxy Batman",
+   "base": "Batman",
+   "tier": "galaxy",
+   "rarity": "unknown",
+   "power": "Leap into the air and deploy the Bat Cape to glide across the Island."
+  },
+  {
+   "id": "spritevar_batman_holofoil",
+   "name": "Holofoil Batman",
+   "base": "Batman",
+   "tier": "holofoil",
+   "rarity": "unknown",
+   "power": "Leap into the air and deploy the Bat Cape to glide across the Island."
+  },
+  {
+   "id": "spritevar_batman_cube",
+   "name": "Cube Batman",
+   "base": "Batman",
+   "tier": "cube",
+   "rarity": "unknown",
+   "power": "Leap into the air and deploy the Bat Cape to glide across the Island."
+  },
+  {
+   "id": "sprite_seven",
+   "name": "Seven",
+   "base": "Seven",
+   "tier": null,
+   "rarity": "unknown",
+   "power": "Makes enemy footsteps visible so your entire squad can track them."
+  },
+  {
+   "id": "spritevar_seven_gold",
+   "name": "Gold Seven",
+   "base": "Seven",
+   "tier": "gold",
+   "rarity": "unknown",
+   "power": "Makes enemy footsteps visible so your entire squad can track them."
+  },
+  {
+   "id": "spritevar_seven_gummy",
+   "name": "Gummy Seven",
+   "base": "Seven",
+   "tier": "gummy",
+   "rarity": "unknown",
+   "power": "Makes enemy footsteps visible so your entire squad can track them."
+  },
+  {
+   "id": "spritevar_seven_galaxy",
+   "name": "Galaxy Seven",
+   "base": "Seven",
+   "tier": "galaxy",
+   "rarity": "unknown",
+   "power": "Makes enemy footsteps visible so your entire squad can track them."
+  },
+  {
+   "id": "spritevar_seven_holofoil",
+   "name": "Holofoil Seven",
+   "base": "Seven",
+   "tier": "holofoil",
+   "rarity": "unknown",
+   "power": "Makes enemy footsteps visible so your entire squad can track them."
+  },
+  {
+   "id": "sprite_air",
+   "name": "Air",
+   "base": "Air",
+   "tier": null,
+   "rarity": "unknown",
+   "power": "Sprint faster, jump higher while sprinting and take zero fall damage."
+  },
+  {
+   "id": "spritevar_air_gold",
+   "name": "Gold Air",
+   "base": "Air",
+   "tier": "gold",
+   "rarity": "unknown",
+   "power": "Sprint faster, jump higher while sprinting and take zero fall damage."
+  },
+  {
+   "id": "spritevar_air_gummy",
+   "name": "Gummy Air",
+   "base": "Air",
+   "tier": "gummy",
+   "rarity": "unknown",
+   "power": "Sprint faster, jump higher while sprinting and take zero fall damage."
+  },
+  {
+   "id": "spritevar_air_galaxy",
+   "name": "Galaxy Air",
+   "base": "Air",
+   "tier": "galaxy",
+   "rarity": "unknown",
+   "power": "Sprint faster, jump higher while sprinting and take zero fall damage."
+  },
+  {
+   "id": "spritevar_air_holofoil",
+   "name": "Holofoil Air",
+   "base": "Air",
+   "tier": "holofoil",
+   "rarity": "unknown",
+   "power": "Sprint faster, jump higher while sprinting and take zero fall damage."
+  },
+  {
+   "id": "sprite_lootin_llama",
+   "name": "Lootin' Llama",
+   "base": "Lootin' Llama",
+   "tier": null,
+   "rarity": "unknown",
+   "power": "Opening Ammo Boxes has a chance to upgrade your weapon"
+  },
+  {
+   "id": "spritevar_lootin_llama_gold",
+   "name": "Gold Lootin' Llama",
+   "base": "Lootin' Llama",
+   "tier": "gold",
+   "rarity": "unknown",
+   "power": "Opening Ammo Boxes has a chance to upgrade your weapon"
+  },
+  {
+   "id": "spritevar_lootin_llama_gummy",
+   "name": "Gummy Lootin' Llama",
+   "base": "Lootin' Llama",
+   "tier": "gummy",
+   "rarity": "unknown",
+   "power": "Opening Ammo Boxes has a chance to upgrade your weapon"
+  },
+  {
+   "id": "spritevar_lootin_llama_galaxy",
+   "name": "Galaxy Lootin' Llama",
+   "base": "Lootin' Llama",
+   "tier": "galaxy",
+   "rarity": "unknown",
+   "power": "Opening Ammo Boxes has a chance to upgrade your weapon"
+  },
+  {
+   "id": "spritevar_lootin_llama_gem",
+   "name": "Gem Lootin' Llama",
+   "base": "Lootin' Llama",
+   "tier": "gem",
+   "rarity": "unknown",
+   "power": "Opening Ammo Boxes has a chance to upgrade your weapon"
+  },
+  {
+   "id": "sprite_peeky_peely",
+   "name": "Peeky Peely",
+   "base": "Peeky Peely",
+   "tier": null,
+   "rarity": "unknown",
+   "power": "Marks nearby rare Sprite variants or enemies carrying them"
+  },
+  {
+   "id": "spritevar_peeky_peely_gold",
+   "name": "Gold Peeky Peely",
+   "base": "Peeky Peely",
+   "tier": "gold",
+   "rarity": "unknown",
+   "power": "Marks nearby rare Sprite variants or enemies carrying them"
+  },
+  {
+   "id": "spritevar_peeky_peely_gummy",
+   "name": "Gummy Peeky Peely",
+   "base": "Peeky Peely",
+   "tier": "gummy",
+   "rarity": "unknown",
+   "power": "Marks nearby rare Sprite variants or enemies carrying them"
+  },
+  {
+   "id": "spritevar_peeky_peely_galaxy",
+   "name": "Galaxy Peeky Peely",
+   "base": "Peeky Peely",
+   "tier": "galaxy",
+   "rarity": "unknown",
+   "power": "Marks nearby rare Sprite variants or enemies carrying them"
+  },
+  {
+   "id": "spritevar_peeky_peely_holofoil",
+   "name": "Holofoil Peeky Peely",
+   "base": "Peeky Peely",
+   "tier": "holofoil",
+   "rarity": "unknown",
+   "power": "Marks nearby rare Sprite variants or enemies carrying them"
+  },
+  {
+   "id": "sprite_burnt_peanut",
+   "name": "Burnt Peanut",
+   "base": "Burnt Peanut",
+   "tier": null,
+   "rarity": "unknown",
+   "power": null
+  },
+  {
+   "id": "sprite_john_wick",
+   "name": "John Wick",
+   "base": "John Wick",
+   "tier": null,
+   "rarity": "unknown",
+   "power": null
+  },
+  {
+   "id": "sprite_pollo",
+   "name": "Pollo",
+   "base": "Pollo",
+   "tier": null,
+   "rarity": "unknown",
+   "power": null
+  },
+  {
+   "id": "sprite_vini_jr",
+   "name": "Vini Jr.",
+   "base": "Vini Jr.",
+   "tier": null,
+   "rarity": "unknown",
+   "power": null
+  }
+ ]
+}

@@ -1,10 +1,97 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Spritedex</title>
-<meta name="viewport" content="width=device-width, initial-scale=1"></head>
-<body style="font-family:-apple-system,system-ui;max-width:640px;margin:4rem auto;padding:0 1rem">
-<h1>Spritedex</h1>
-<p>An unofficial companion app for tracking your Fortnite Sprite collection.</p>
-<p><a href="support.html">Support</a> · <a href="privacy.html">Privacy policy</a></p>
-<p style="color:#666;font-size:.85rem">Portions of the materials used are trademarks and/or
-copyrighted works of Epic Games, Inc. All rights reserved by Epic. This material is not
-official and is not endorsed by Epic.</p>
-</body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Spritedex — Fortnite Sprite tracker</title>
+<meta name="description" content="Track every Fortnite Sprite and variant. Free, unofficial, works offline, no account needed.">
+<meta name="theme-color" content="#0b0d14">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<main id="app">
+  <header class="top">
+    <h1 class="wordmark">SPRITEDEX</h1>
+    <button id="menuBtn" class="iconbtn" aria-label="Menu">⋯</button>
+  </header>
+
+  <section class="hero" aria-live="polite">
+    <div class="count-row">
+      <span id="ownedCount" class="count">0</span>
+      <span id="totalCount" class="count-total">/ 0</span>
+      <span id="milestone" class="milestone"></span>
+    </div>
+    <div class="bar"><div id="barFill" class="bar-fill"></div></div>
+    <div id="tierChips" class="tier-chips" role="list"></div>
+  </section>
+
+  <section class="filters">
+    <div class="searchbox">
+      <input id="search" type="search" placeholder="Water, Gold, Galaxy…"
+             autocomplete="off" autocapitalize="none" aria-label="Search sprites">
+    </div>
+    <div class="segmented" role="tablist" aria-label="Collection filter">
+      <button data-ownership="all" class="on" role="tab" aria-selected="true">All</button>
+      <button data-ownership="owned" role="tab" aria-selected="false">Owned</button>
+      <button data-ownership="missing" role="tab" aria-selected="false">Missing</button>
+    </div>
+    <div id="chipRow" class="chip-row"></div>
+    <div class="meta-row">
+      <span id="resultCount" class="result-count"></span>
+      <span class="spacer"></span>
+      <select id="sort" aria-label="Sort order">
+        <option value="standard">Default</option>
+        <option value="nameAsc">Name (A–Z)</option>
+        <option value="nameDesc">Name (Z–A)</option>
+        <option value="rarityDesc">Rarity (high first)</option>
+        <option value="rarityAsc">Rarity (low first)</option>
+        <option value="tier">Variant tier</option>
+      </select>
+      <button id="clearFilters" class="linkbtn" hidden>Clear</button>
+    </div>
+  </section>
+
+  <p id="storageWarning" class="banner" hidden>
+    Your browser is blocking storage (private browsing?), so catches won't survive
+    closing this tab. Export a share code from the ⋯ menu to keep them.
+  </p>
+
+  <section id="grid" class="grid" aria-label="Sprite collection"></section>
+
+  <footer class="foot">
+    <p>Unofficial companion app. Not affiliated with Epic Games.</p>
+    <p class="fine">Portions of the materials used are trademarks and/or copyrighted works
+    of Epic Games, Inc. All rights reserved by Epic. This material is not official and is
+    not endorsed by Epic.</p>
+    <p class="fine"><a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></p>
+  </footer>
+</main>
+
+<dialog id="menu" class="sheet">
+  <h2>Your dex</h2>
+  <p class="fine">Catches are saved on this device automatically. To move them to
+  another device, copy your share code there.</p>
+  <div class="sheet-row">
+    <button id="exportBtn">Copy share code</button>
+    <output id="exportOut" class="code"></output>
+  </div>
+  <div class="sheet-row">
+    <input id="importIn" placeholder="Paste a share code…" autocomplete="off" autocapitalize="none">
+    <button id="importBtn">Import</button>
+    <span id="importMsg" class="fine" role="status"></span>
+  </div>
+  <div class="sheet-row danger-row">
+    <button id="resetBtn" class="danger">Delete all my catches</button>
+  </div>
+  <p class="fine">Spritedex is free fan content under
+  <a href="https://legal.epicgames.com/epicgames/fan-art-policy" rel="noopener">Epic's Fan Content Policy</a>.
+  No ads, no accounts, no tracking.</p>
+  <button id="closeMenu" class="linkbtn">Close</button>
+</dialog>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "Spritedex",
+  "short_name": "Spritedex",
+  "description": "Track every Fortnite Sprite and variant. Free, unofficial, offline-capable.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0b0d14",
+  "theme_color": "#0b0d14",
+  "icons": [{ "src": "assets/icon.png", "sizes": "1024x1024", "type": "image/png" }]
+}
