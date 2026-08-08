@@ -48,7 +48,6 @@
         <option value="nameDesc">Name (Z–A)</option>
         <option value="rarityDesc">Rarity (high first)</option>
         <option value="rarityAsc">Rarity (low first)</option>
-        <option value="tier">Variant tier</option>
       </select>
       <button id="clearFilters" class="linkbtn" hidden>Clear</button>
     </div>
@@ -59,7 +58,7 @@
     closing this tab. Export a share code from the ⋯ menu to keep them.
   </p>
 
-  <section id="grid" class="grid" aria-label="Sprite collection"></section>
+  <section id="groups" class="groups" aria-label="Sprite collection"></section>
 
   <footer class="foot">
     <p>Unofficial companion app. Not affiliated with Epic Games.</p>
@@ -86,6 +85,8 @@
   <div class="sheet-row danger-row">
     <button id="resetBtn" class="danger">Delete all my catches</button>
   </div>
+  <h3 class="fine-h">Variant tiers</h3>
+  <div id="tierLegend" class="legend"></div>
   <p class="fine">Spritedex is free fan content under
   <a href="https://legal.epicgames.com/epicgames/fan-art-policy" rel="noopener">Epic's Fan Content Policy</a>.
   No ads, no accounts, no tracking.</p>

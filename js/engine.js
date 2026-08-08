@@ -82,6 +82,34 @@ export function tierProgress(slots, ownedIds, tier) {
   };
 }
 
+// Display grouping: one entry per sprite, its surviving slots nested, sprites that
+// match nothing dropped. Display order comes from data.sprites (catalogue order) and
+// never from the slots array, whose order belongs to the share codes.
+export function groupResults(query, data, ownedIds) {
+  const slotById = new Map(data.slots.map((s) => [s.id, s]));
+  const matched = new Set(applyQuery(query, data.slots, ownedIds).map((s) => s.id));
+  const groups = data.sprites.map((sprite) => ({
+    ...sprite,
+    slots: sprite.slots.map((id) => slotById.get(id)).filter((s) => s && matched.has(s.id)),
+  })).filter((g) => g.slots.length > 0);
+  return sortGroups(groups, query.sort);
+}
+
+export function sortGroups(groups, sort) {
+  const byName = (a, b) => a.name.localeCompare(b.name);
+  switch (sort) {
+    case "nameAsc": return [...groups].sort(byName);
+    case "nameDesc": return [...groups].sort((a, b) => byName(b, a));
+    case "rarityDesc":
+      return [...groups].sort((a, b) =>
+        (RARITY_RANK[b.rarity] - RARITY_RANK[a.rarity]) || byName(a, b));
+    case "rarityAsc":
+      return [...groups].sort((a, b) =>
+        (RARITY_RANK[a.rarity] - RARITY_RANK[b.rarity]) || byName(a, b));
+    default: return groups;
+  }
+}
+
 export function milestone(fraction) {
   if (fraction <= 0) return "Tap a sprite to catch it";
   if (fraction < 0.25) return "Just getting started";

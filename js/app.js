@@ -1,7 +1,8 @@
 // DOM wiring only — all logic lives in engine.js / store.js where node can test it.
 
 import {
-  applyQuery, availableTiers, defaultQuery, isFiltering, milestone, tierProgress,
+  applyQuery, availableTiers, defaultQuery, groupResults, isFiltering, milestone,
+  tierProgress,
 } from "./engine.js";
 import { clearAll, exportCode, importCode, loadOwned, saveOwned, toggle } from "./store.js";
 
@@ -17,15 +18,18 @@ const RARITIES = ["mythic", "legendary", "epic", "rare", "unknown"];
 
 const $ = (id) => document.getElementById(id);
 
+let data = { tiers: [], sprites: [], slots: [] };
 let slots = [];
 let owned = loadOwned();
 let query = defaultQuery();
 
 async function boot() {
   const res = await fetch("data/slots.json");
-  slots = (await res.json()).slots;
+  data = await res.json();
+  slots = data.slots;
 
   buildFilterChips();
+  buildTierLegend();
   wireEvents();
   importFromUrlHash();
   render();
@@ -39,7 +43,7 @@ async function boot() {
 
 function render() {
   renderHero();
-  renderGrid();
+  renderGroups();
   renderMeta();
 }
 
@@ -63,29 +67,52 @@ function renderHero() {
   $("tierChips").innerHTML = chips.join("");
 }
 
-function renderGrid() {
-  const results = applyQuery(query, slots, owned);
-  const grid = $("grid");
+function tile(slot, isOwned) {
+  const tint = slot.tier ? TIER_VARS[slot.tier] ?? "--unknown" : RARITY_VARS[slot.rarity];
+  const label = slot.tier ? cap(slot.tier) : "Base";
+  return `<div class="vt-col">
+    <button class="vt ${isOwned ? "owned" : ""}" data-id="${slot.id}"
+      style="--tint: var(${tint})" aria-pressed="${isOwned}"
+      aria-label="${slot.name}, ${isOwned ? "caught" : "not caught"}">
+      <span class="vt-in"><img src="assets/sprites/${slot.id}.png" alt="" loading="lazy"
+        onerror="this.style.visibility='hidden'"></span>
+    </button>
+    <span class="vt-label" aria-hidden="true">${label}</span>
+  </div>`;
+}
 
-  if (!results.length) {
-    grid.innerHTML = `<div class="empty">Nothing matches those filters.</div>`;
+function renderGroups() {
+  const groups = groupResults(query, data, owned);
+  const container = $("groups");
+
+  if (!groups.length) {
+    container.innerHTML = `<div class="empty">Nothing matches those filters.</div>`;
     return;
   }
 
-  grid.innerHTML = results.map((slot) => {
-    const isOwned = owned.has(slot.id);
-    const tint = slot.tier ? TIER_VARS[slot.tier] ?? "--unknown" : RARITY_VARS[slot.rarity];
-    const ribbon = slot.rarity === "unknown" ? "?" : slot.rarity.toUpperCase();
-    return `<button class="tile ${isOwned ? "owned" : ""}" data-id="${slot.id}"
-      style="--tint: var(${tint}); --rtint: var(${RARITY_VARS[slot.rarity]})"
-      aria-pressed="${isOwned}"
-      aria-label="${slot.name}, ${isOwned ? "caught" : "not caught"}">
-      <span class="art"><img src="assets/sprites/${slot.id}.png" alt="" loading="lazy"
-        onerror="this.style.visibility='hidden'"></span>
-      <span class="ribbon">${ribbon}</span>
-      <span class="ring" aria-hidden="true"></span>
-      <span class="name">${slot.name}</span>
-    </button>`;
+  container.innerHTML = groups.map((group) => {
+    const total = group.slots.length;
+    const have = group.slots.filter((s) => owned.has(s.id)).length;
+    const full = have === total;
+    const ribbon = group.rarity === "unknown" ? "?" : group.rarity.toUpperCase();
+    return `<article class="srow ${full ? "full" : ""}"
+      style="--rtint: var(${RARITY_VARS[group.rarity]})">
+      <header class="srow-head">
+        <img class="srow-hero" src="assets/sprites/${group.id}.png" alt="" loading="lazy"
+          onerror="this.style.visibility='hidden'">
+        <div class="srow-title">
+          <span class="srow-name">${group.name}</span>
+          ${group.power ? `<span class="srow-power">${group.power}</span>` : ""}
+        </div>
+        <span class="srow-rarity">${ribbon}</span>
+        <span class="srow-count">${have}/${total}</span>
+        <button class="srow-all" data-group="${group.id}"
+          aria-label="${full ? "Uncatch all" : "Catch all"} ${group.name}">
+          ${full ? "✓ All" : "All"}
+        </button>
+      </header>
+      <div class="vt-row">${group.slots.map((s) => tile(s, owned.has(s.id))).join("")}</div>
+    </article>`;
   }).join("");
 }
 
@@ -111,13 +138,35 @@ function buildFilterChips() {
 
 const cap = (s) => s[0].toUpperCase() + s.slice(1);
 
+function buildTierLegend() {
+  $("tierLegend").innerHTML = data.tiers
+    .filter((t) => t.id !== "special")
+    .map((t) => `<div class="legend-row">
+      <span class="legend-dot" style="background:${t.color}"></span>
+      <b>${t.name}</b><span>${t.effect}</span></div>`)
+    .join("");
+}
+
 // --- Events ----------------------------------------------------------------
 
 function wireEvents() {
-  $("grid").addEventListener("click", (e) => {
-    const tile = e.target.closest(".tile");
-    if (!tile) return;
-    const result = toggle(owned, tile.dataset.id);
+  $("groups").addEventListener("click", (e) => {
+    const all = e.target.closest(".srow-all");
+    if (all) {
+      // Catch every slot in the sprite; a second tap on a full row releases them.
+      const group = data.sprites.find((g) => g.id === all.dataset.group);
+      const next = new Set(owned);
+      const full = group.slots.every((id) => next.has(id));
+      group.slots.forEach((id) => (full ? next.delete(id) : next.add(id)));
+      owned = next;
+      $("storageWarning").hidden = saveOwned(owned);
+      if (navigator.vibrate) navigator.vibrate(12);
+      render();
+      return;
+    }
+    const tileBtn = e.target.closest(".vt");
+    if (!tileBtn) return;
+    const result = toggle(owned, tileBtn.dataset.id);
     owned = result.owned;
     $("storageWarning").hidden = result.persisted;
     if (navigator.vibrate) navigator.vibrate(8);
