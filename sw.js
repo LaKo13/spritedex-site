@@ -1,6 +1,6 @@
 // Offline support: precache the shell, cache sprites as they load. Bump VERSION on
 // deploy (tools/deploy-web.sh stamps it) so clients pick up new releases.
-const VERSION = "spritedex-202608081153-5a76aeb";
+const VERSION = "spritedex-202608131111-3dcc8b3";
 const SHELL = [
   ".", "index.html", "css/app.css", "js/app.js", "js/engine.js", "js/store.js",
   "data/slots.json", "manifest.webmanifest", "assets/icon.png",

@@ -171,7 +171,8 @@
     "spritevar_punk_gold",
     "spritevar_punk_gummy",
     "spritevar_punk_galaxy",
-    "spritevar_punk_cube"
+    "spritevar_punk_cube",
+    "spritevar_punk_gem"
    ]
   },
   {
@@ -1422,6 +1423,15 @@
    "tier": "gem",
    "rarity": "mythic",
    "power": "Spawn a Shield Bubble Jr. when you use a healing item on yourself"
+  },
+  {
+   "id": "spritevar_punk_gem",
+   "name": "Gem Punk",
+   "base": "Punk",
+   "baseId": "sprite_punk",
+   "tier": "gem",
+   "rarity": "legendary",
+   "power": "Possibly nothing... or infinitely something"
   }
  ]
 }
